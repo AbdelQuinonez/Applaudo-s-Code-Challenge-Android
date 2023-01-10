@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid
+package com.example.applaudoscodechallengeandroid.ui
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
