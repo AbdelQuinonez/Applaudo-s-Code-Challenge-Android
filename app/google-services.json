@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "731322768052",
+    "project_id": "applaudoscodechallengeandroid",
+    "storage_bucket": "applaudoscodechallengeandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731322768052:android:7f07e7bd39c3cd8c4ed5e1",
+        "android_client_info": {
+          "package_name": "com.example.applaudoscodechallengeandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731322768052-2arn0omrtrjvc9mqgmbt0i5fshe690rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD14l7HnLpESKTqwkkYTmS8YxOHEmqxUdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731322768052-2arn0omrtrjvc9mqgmbt0i5fshe690rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
