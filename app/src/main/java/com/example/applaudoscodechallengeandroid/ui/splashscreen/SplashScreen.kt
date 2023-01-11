@@ -84,7 +84,7 @@ fun AnimationSplashContent(
 
         delay(timeMillis = delayScreen)
 
-        navController.navigate(route = NavigationDestinations.SPLASHSCREEN_ROUTE)
+        navController.navigate(route = NavigationDestinations.LOG_IN_ROUTE)
     }
 }
 
@@ -97,13 +97,16 @@ fun SplashScreenContent(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(                Brush.verticalGradient(
-                colors = listOf(
-                    tertiarySecondaryVariant,
-                    GRADIENT,
-                    GRADIENT,
+            .background(
+                Brush.verticalGradient(
+                    colors = listOf(
+                        tertiarySecondaryVariant,
+                        //Double to simulate the same image from figma
+                        GRADIENT,
+                        GRADIENT,
+                    )
                 )
-            )),
+            ),
         contentAlignment = Alignment.Center
     ) {
         Image(

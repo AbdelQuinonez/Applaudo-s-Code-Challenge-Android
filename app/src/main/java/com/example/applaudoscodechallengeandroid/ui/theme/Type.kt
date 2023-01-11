@@ -15,7 +15,7 @@ private val Roboto = FontFamily(
 )
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+val ApplaudosTypography = Typography(
 
     defaultFontFamily = Roboto,
 
