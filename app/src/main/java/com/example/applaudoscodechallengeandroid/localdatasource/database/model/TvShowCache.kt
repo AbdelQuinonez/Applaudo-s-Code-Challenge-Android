@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid.local_datasource.database.model
+package com.example.applaudoscodechallengeandroid.localdatasource.database.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

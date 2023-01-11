@@ -2,7 +2,7 @@ package com.example.applaudoscodechallengeandroid.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.applaudoscodechallengeandroid.local_datasource.database.AppDatabase
+import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
 import com.example.applaudoscodechallengeandroid.utils.Constants.LOCAL_DATABASE_NAME
 import dagger.Module
 import dagger.Provides

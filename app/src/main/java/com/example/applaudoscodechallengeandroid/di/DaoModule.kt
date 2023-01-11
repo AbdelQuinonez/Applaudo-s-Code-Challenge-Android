@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.example.applaudoscodechallengeandroid.local_datasource.database.AppDatabase
-import com.example.applaudoscodechallengeandroid.local_datasource.database.daos.TvShowDao
+import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
+import com.example.applaudoscodechallengeandroid.localdatasource.database.daos.TvShowDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
