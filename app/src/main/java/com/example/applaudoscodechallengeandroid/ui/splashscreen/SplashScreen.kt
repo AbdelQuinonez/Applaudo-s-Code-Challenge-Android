@@ -20,13 +20,13 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_IMAGE_SPLASH_SCREEN
-import com.example.applaudoscodechallengeandroid.utils.Constants.RECOMMENDED_ANIMATION_DURATION
-import com.example.applaudoscodechallengeandroid.utils.Constants.SPLASH_SCREEN_DELAY_DURATION
 import com.example.applaudoscodechallengeandroid.R
 import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinations
 import com.example.applaudoscodechallengeandroid.ui.theme.GRADIENT
 import com.example.applaudoscodechallengeandroid.ui.theme.tertiarySecondaryVariant
+import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_IMAGE_SPLASH_SCREEN
+import com.example.applaudoscodechallengeandroid.utils.Constants.RECOMMENDED_ANIMATION_DURATION
+import com.example.applaudoscodechallengeandroid.utils.Constants.SPLASH_SCREEN_DELAY_DURATION
 import kotlinx.coroutines.delay
 
 @Composable
