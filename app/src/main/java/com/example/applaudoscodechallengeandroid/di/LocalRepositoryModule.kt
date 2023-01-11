@@ -1,14 +1,27 @@
 package com.example.applaudoscodechallengeandroid.di
 
+import android.app.Application
 import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
+import androidx.datastore.preferences.core.PreferenceDataStoreFactory
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.emptyPreferences
+import androidx.datastore.preferences.preferencesDataStoreFile
 import androidx.room.Room
+import com.e1technology.repository.UserPreferences
+import com.e1technology.repository.UserPreferencesImpl
 import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
+import com.example.applaudoscodechallengeandroid.utils.Constants.DATA_STORE_NAME
 import com.example.applaudoscodechallengeandroid.utils.Constants.LOCAL_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import javax.inject.Singleton
 
 @Module
@@ -22,5 +35,22 @@ object LocalRepositoryModule {
             context,
             AppDatabase::class.java, LOCAL_DATABASE_NAME
         ).build()
+
+    @Provides
+    @Singleton
+    fun provideDataStore(application: Application): DataStore<Preferences> =
+        PreferenceDataStoreFactory.create(
+            corruptionHandler = ReplaceFileCorruptionHandler(
+                produceNewData = { emptyPreferences() }
+            ),
+            scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
+            produceFile = { application.preferencesDataStoreFile(DATA_STORE_NAME) }
+        )
+
+    @Provides
+    @Singleton
+    fun provideUserPreferences(dataStore: DataStore<Preferences>): UserPreferences {
+        return UserPreferencesImpl(dataStore)
+    }
 
 }

@@ -1,6 +1,10 @@
 package com.example.applaudoscodechallengeandroid.utils
 
+import androidx.datastore.preferences.core.stringPreferencesKey
+
 object Constants {
+    const val EMPTY_STRING = ""
+    const val DATA_STORE_NAME = "applaudosDataStore"
     const val LOCAL_DATABASE_NAME = "ApplaudosLocalDatabase"
     const val CONTENT_DESCRIPTION_IMAGE_SPLASH_SCREEN = "splashScreenContentDescription"
     const val RECOMMENDED_ANIMATION_DURATION = 1000
@@ -14,4 +18,10 @@ object Constants {
     const val API_RESPONSE_CODE_403 = 403
     const val API_RESPONSE_CODE_404 = 404
     const val NO_ERROR_MESSAGE = ""
+
+    //DataStore constants
+    const val PREFERENCES_KEY_USER_API_TOKEN = "user_api_token"
+    const val PREFERENCES_KEY_USER_LOGIN_TOKEN = "user_login_token"
+    const val PREFERENCES_KEY_USER_EMAIL = "user_email"
+    const val PREFERENCES_KEY_USER_NAME = "user_name"
 }
