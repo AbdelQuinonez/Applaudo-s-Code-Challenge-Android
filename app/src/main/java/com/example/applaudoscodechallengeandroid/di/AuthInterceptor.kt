@@ -1,6 +1,6 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.e1technology.repository.UserPreferences
+import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
@@ -10,7 +10,7 @@ class AuthInterceptor(private val userPreferences: UserPreferences): Interceptor
     override fun intercept(chain: Interceptor.Chain): Response {
         var jwt = ""
         runBlocking {
-            jwt = userPreferences.getEmail().first()
+            jwt = userPreferences.getApiToken().first()
         }
         val request = chain.request()
         val requestBuilder = request.newBuilder()

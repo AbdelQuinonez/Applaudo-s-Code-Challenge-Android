@@ -1,6 +1,7 @@
 package com.example.applaudoscodechallengeandroid.core
 
 import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_401
+import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_402
 import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_403
 import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_404
 import com.example.applaudoscodechallengeandroid.utils.Constants.ERROR_UNKNOWN
@@ -20,9 +21,10 @@ class ErrorHandling {
 
             if (e is HttpException &&
                 (e.code() == API_RESPONSE_CODE_401 ||
+                        e.code() == API_RESPONSE_CODE_402 ||
                         e.code() == API_RESPONSE_CODE_403 ||
                         e.code() == API_RESPONSE_CODE_404)
-            ) { // We don't show 404 errors to the users.
+            ) {
                 // TODO("Let applaudo decide how this error is going to be handled")
                 return error
             }

@@ -1,6 +1,6 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.e1technology.repository.UserPreferences
+import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import com.example.applaudoscodechallengeandroid.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -18,7 +18,6 @@ import javax.inject.Singleton
 object ApiModule {
 
     private fun getOkHttpClientBuilder(): OkHttpClient.Builder {
-
         // Timeout setup
         val okHttpClientBuilder = OkHttpClient.Builder()
             .readTimeout(30, TimeUnit.SECONDS)
@@ -67,6 +66,5 @@ object ApiModule {
             .client(okHttpClient)
             .build()
     }
-
 
 }

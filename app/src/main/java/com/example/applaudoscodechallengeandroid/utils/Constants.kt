@@ -24,4 +24,6 @@ object Constants {
     const val PREFERENCES_KEY_USER_LOGIN_TOKEN = "user_login_token"
     const val PREFERENCES_KEY_USER_EMAIL = "user_email"
     const val PREFERENCES_KEY_USER_NAME = "user_name"
+
+    const val API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzkzZDJhYTQ1ODk4NDgyNWQzNGNkMDUxNzg3YjU4NSIsInN1YiI6IjYzYmRiNTg4ZmE0MDQ2MDA4NzU3MzcxNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FELVUEQDbZHwXm2fikIJ57kiOgWn9X2Ge21jflX6JAQ"
 }

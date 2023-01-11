@@ -9,8 +9,8 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.preferencesDataStoreFile
 import androidx.room.Room
-import com.e1technology.repository.UserPreferences
-import com.e1technology.repository.UserPreferencesImpl
+import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
+import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferencesImpl
 import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
 import com.example.applaudoscodechallengeandroid.utils.Constants.DATA_STORE_NAME
 import com.example.applaudoscodechallengeandroid.utils.Constants.LOCAL_DATABASE_NAME
