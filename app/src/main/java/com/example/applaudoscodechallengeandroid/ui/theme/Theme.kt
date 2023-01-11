@@ -34,7 +34,7 @@ fun ApplaudosCodeChallengeAndroidTheme(
     MaterialTheme(
         colors = colors,
         typography = Typography,
-        shapes = Shapes,
+        shapes = ApplaudosShapes,
         content = content
     )
 }

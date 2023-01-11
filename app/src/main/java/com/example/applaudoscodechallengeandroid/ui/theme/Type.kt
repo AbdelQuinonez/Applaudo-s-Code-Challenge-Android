@@ -85,6 +85,12 @@ val Typography = Typography(
         letterSpacing = 0.4.sp
     ),
 
+    button = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        letterSpacing = 1.25.sp,
+    ),
+
     overline = TextStyle(
         fontWeight = FontWeight.Normal,
         fontSize = 10.sp,

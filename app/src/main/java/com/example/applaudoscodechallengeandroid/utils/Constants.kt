@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid
+package com.example.applaudoscodechallengeandroid.utils
 
 object Constants {
     const val CONTENT_DESCRIPTION_IMAGE_SPLASH_SCREEN = "splashScreenContentDecription"
