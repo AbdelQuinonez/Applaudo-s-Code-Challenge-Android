@@ -6,19 +6,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.applaudoscodechallengeandroid.R
 import com.example.applaudoscodechallengeandroid.ui.components.PrimaryButton
 import com.example.applaudoscodechallengeandroid.ui.login.state.LoginViewModel
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
-import com.example.applaudoscodechallengeandroid.ui.theme.GRAY
 import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
 import com.example.applaudoscodechallengeandroid.utils.Constants
 
