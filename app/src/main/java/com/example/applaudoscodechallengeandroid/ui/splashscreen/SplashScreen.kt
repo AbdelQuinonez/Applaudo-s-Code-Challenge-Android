@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.applaudoscodechallengeandroid.R
 import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinations
@@ -32,6 +33,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashRoute(
     navController: NavController,
+    viewModel: SplashScreenViewModel = hiltViewModel()
 ) {
     SplashScreen(
         navController = navController,

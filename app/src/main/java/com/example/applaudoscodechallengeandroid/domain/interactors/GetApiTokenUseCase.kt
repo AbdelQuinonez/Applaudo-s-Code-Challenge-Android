@@ -4,7 +4,7 @@ import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import com.example.applaudoscodechallengeandroid.utils.Constants
 import javax.inject.Inject
 
-class RequestApiTokenUseCase @Inject constructor(
+class GetApiTokenUseCase @Inject constructor(
     private val userPreferences: UserPreferences
 ) {
     suspend operator fun invoke(){
