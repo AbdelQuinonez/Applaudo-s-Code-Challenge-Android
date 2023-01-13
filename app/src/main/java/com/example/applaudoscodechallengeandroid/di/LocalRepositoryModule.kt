@@ -12,6 +12,7 @@ import androidx.room.Room
 import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferencesImpl
 import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
+import com.example.applaudoscodechallengeandroid.utils.AppDispatcher
 import com.example.applaudoscodechallengeandroid.utils.Constants.DATA_STORE_NAME
 import com.example.applaudoscodechallengeandroid.utils.Constants.LOCAL_DATABASE_NAME
 import dagger.Module
@@ -38,12 +39,12 @@ object LocalRepositoryModule {
 
     @Provides
     @Singleton
-    fun provideDataStore(application: Application): DataStore<Preferences> =
+    fun provideDataStore(application: Application, dispatcher: AppDispatcher): DataStore<Preferences> =
         PreferenceDataStoreFactory.create(
             corruptionHandler = ReplaceFileCorruptionHandler(
                 produceNewData = { emptyPreferences() }
             ),
-            scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
+            scope = CoroutineScope(dispatcher.io() + SupervisorJob()),
             produceFile = { application.preferencesDataStoreFile(DATA_STORE_NAME) }
         )
 

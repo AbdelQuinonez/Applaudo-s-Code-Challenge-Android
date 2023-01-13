@@ -14,11 +14,10 @@ data class TvShowsResponseModel(
     val totalPages: Int = 0
 ) {
     fun mapFromRemoteToCacheModel(
-        tvShowsResponseModel: TvShowsResponseModel
     ): List<TvShowCacheModel> {
         val tvShowCacheModelList = mutableListOf<TvShowCacheModel>()
 
-        tvShowsResponseModel.results.forEach { result ->
+        this.results.forEach { result ->
             tvShowCacheModelList.add(
                 TvShowCacheModel(
                     id = result.id,

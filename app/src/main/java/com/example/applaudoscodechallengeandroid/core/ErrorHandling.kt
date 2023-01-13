@@ -25,7 +25,7 @@ class ErrorHandling {
                         e.code() == API_RESPONSE_CODE_403 ||
                         e.code() == API_RESPONSE_CODE_404)
             ) {
-                // TODO("Let applaudo decide how this error is going to be handled")
+                // TODO("Let applaudos decide how this error is going to be handled")
                 return error
             }
 
