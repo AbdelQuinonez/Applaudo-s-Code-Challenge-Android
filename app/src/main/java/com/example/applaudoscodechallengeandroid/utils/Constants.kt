@@ -18,6 +18,7 @@ object Constants {
     const val API_RESPONSE_CODE_403 = 403
     const val API_RESPONSE_CODE_404 = 404
     const val NO_ERROR_MESSAGE = ""
+    const val NO_IMAGE_RESOURCE = 0
 
     //DataStore constants
     const val PREFERENCES_KEY_USER_API_TOKEN = "user_api_token"

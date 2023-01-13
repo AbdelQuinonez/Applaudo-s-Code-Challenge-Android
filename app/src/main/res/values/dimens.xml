@@ -8,4 +8,6 @@
 
     //Login Screen
     <dimen name="login_screen_margin_between_components">24dp</dimen>
+
+    <dimen name="default_card_corner_radius">12dp</dimen>
 </resources>
