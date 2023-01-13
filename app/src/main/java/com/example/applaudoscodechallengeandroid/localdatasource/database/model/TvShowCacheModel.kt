@@ -3,6 +3,7 @@ package com.example.applaudoscodechallengeandroid.localdatasource.database.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 
 @Entity
 data class TvShowCacheModel(
@@ -14,4 +15,13 @@ data class TvShowCacheModel(
     val voteAverage: Double = 0.0,
     @ColumnInfo
     val posterPath: String = "",
-)
+){
+    fun mapFromCacheToDomain(): TvShowDomainModel{
+        return TvShowDomainModel(
+            id = this.id,
+            name = this.name,
+            voteAverage = this.voteAverage,
+            posterPath = this.posterPath
+        )
+    }
+}
