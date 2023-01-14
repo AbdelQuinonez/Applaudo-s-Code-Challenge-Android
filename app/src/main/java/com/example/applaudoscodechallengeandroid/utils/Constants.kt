@@ -30,4 +30,6 @@ object Constants {
 
     const val API_TOKEN =
         "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzkzZDJhYTQ1ODk4NDgyNWQzNGNkMDUxNzg3YjU4NSIsInN1YiI6IjYzYmRiNTg4ZmE0MDQ2MDA4NzU3MzcxNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FELVUEQDbZHwXm2fikIJ57kiOgWn9X2Ge21jflX6JAQ"
+
+
 }

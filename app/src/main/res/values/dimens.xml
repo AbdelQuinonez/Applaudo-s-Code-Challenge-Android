@@ -10,4 +10,23 @@
     <dimen name="login_screen_margin_between_components">24dp</dimen>
 
     <dimen name="default_card_corner_radius">12dp</dimen>
+
+    //TvShowListScreen
+    <dimen name="tv_show_list_space_between_items">16dp</dimen>
+    <dimen name="tv_show_list_space_between_chips">8dp</dimen>
+    <dimen name="tv_show_list_margin_top_bottom_chips">24dp</dimen>
+
+    //TvShowComponent
+    <dimen name="tv_show_component_elevation">3dp</dimen>
+    <dimen name="tv_show_component_general_margin">16dp</dimen>
+    <dimen name="tv_show_component_start_padding">12dp</dimen>
+    <dimen name="tv_show_component_top_bottom_padding">16dp</dimen>
+    <dimen name="tv_show_component_start_text_padding">8dp</dimen>
+    <dimen name="tv_show_component_image_min_width_size">136dp</dimen>
+    <dimen name="tv_show_component_image_min_height_size">156dp</dimen>
+
+    //SortChip
+    <dimen name="sort_chip_elevation">4dp</dimen>
+    <dimen name="sort_chip_horizontal_padding">16dp</dimen>
+    <dimen name="sort_chip_vertical_padding">4dp</dimen>
 </resources>

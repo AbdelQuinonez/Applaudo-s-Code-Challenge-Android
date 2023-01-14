@@ -6,28 +6,20 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.BlendMode
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.drawscope.DrawScope
-import androidx.compose.ui.graphics.nativeCanvas
-import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.example.applaudoscodechallengeandroid.BuildConfig
 import com.example.applaudoscodechallengeandroid.R
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosCodeChallengeAndroidTheme
@@ -49,36 +41,46 @@ fun TvShowComposable(
     @DrawableRes localResource: Int = NO_IMAGE_RESOURCE,
 ) {
 
-    Box(
+    Surface(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(bottom = 8.dp),
-        contentAlignment = Alignment.Center
+            .fillMaxSize(),
+        elevation = dimensionResource(id = R.dimen.tv_show_component_elevation),
+        shape = RoundedCornerShape(dimensionResource(R.dimen.default_card_corner_radius))
     ) {
         Card(
             modifier = modifier
                 .fillMaxWidth()
                 .clickable { onClick() }
                 .testTag(TV_SHOW_TEST_TAG),
-            shape = RoundedCornerShape(dimensionResource(R.dimen.default_card_corner_radius)),
         ) {
-            Column(Modifier.padding(top = 7.33.dp, start = 4.dp, end = 4.dp, bottom = 4.dp)) {
+            Column {
                 Image(
                     painter = rememberAsyncImagePainter(
-                        model = tvShowDomainModel.posterPath,
+                        model = BuildConfig.BASE_IMAGE_URL + tvShowDomainModel.posterPath,
                         error = painterResource(R.drawable.ic_no_image)
                     ),
                     contentDescription = contentDescription,
                     modifier = Modifier
                         .fillMaxWidth()
                         .fillMaxHeight(0.5f)
-                        .widthIn(min = 128.dp, max = 128.dp)
-                        .heightIn(min = 77.dp, max = 77.dp)
+                        .widthIn(
+                            min = dimensionResource(id = R.dimen.tv_show_component_image_min_width_size),
+                            max = dimensionResource(id = R.dimen.tv_show_component_image_min_width_size)
+                        )
+                        .heightIn(
+                            min = dimensionResource(id = R.dimen.tv_show_component_image_min_height_size),
+                            max = dimensionResource(id = R.dimen.tv_show_component_image_min_height_size)
+                        ),
+                    contentScale = ContentScale.FillBounds
                 )
 
                 Text(
                     modifier = Modifier
-                        .padding(8.dp),
+                        .padding(
+                            start = dimensionResource(id = R.dimen.tv_show_component_start_padding),
+                            top = dimensionResource(id = R.dimen.tv_show_component_top_bottom_padding),
+                            end = dimensionResource(id = R.dimen.tv_show_component_start_padding),
+                        ),
                     text = tvShowDomainModel.name,
                     style = ApplaudosTypography.subtitle2,
                     color = TEXT,
@@ -86,97 +88,28 @@ fun TvShowComposable(
                     maxLines = 1,
                 )
 
-                Row {
-                    RatingBar(rating = tvShowDomainModel.voteAverage.toFloat(), spaceBetween = 4.dp)
+                Row(
+                    Modifier
+                        .padding(
+                            start = dimensionResource(id = R.dimen.tv_show_component_start_padding),
+                            end = dimensionResource(id = R.dimen.tv_show_component_start_padding),
+                            bottom = dimensionResource(id = R.dimen.tv_show_component_top_bottom_padding)
+                        ),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    RatingBar(
+                        rating = tvShowDomainModel.voteAverage.toFloat(),
+                        spaceBetween = 4.dp
+                    )
+                    Text(
+                        modifier = Modifier.padding(start = dimensionResource(id = R.dimen.tv_show_component_start_text_padding)),
+                        text = tvShowDomainModel.voteAverage.toString(),
+                        style = ApplaudosTypography.body2,
+                        color = TEXT
+                    )
                 }
             }
         }
-    }
-}
-
-
-@Composable
-private fun RatingBar(
-    modifier: Modifier = Modifier,
-    rating: Float,
-    spaceBetween: Dp = 0.dp
-) {
-
-
-    val image = ImageBitmap.imageResource(id = R.drawable.ic_rating_star_empty)
-    val imageFull = ImageBitmap.imageResource(id = R.drawable.ic_rating_star_filled)
-
-    val totalCount = 5
-
-    val height = LocalDensity.current.run { image.height.toDp() }
-    val width = LocalDensity.current.run { image.width.toDp() }
-    val space = LocalDensity.current.run { spaceBetween.toPx() }
-    val totalWidth = width * totalCount + spaceBetween * (totalCount - 1)
-
-
-    Box(
-        modifier
-            .width(totalWidth)
-            .height(height)
-            .drawBehind {
-                drawRating(rating, image, imageFull, space)
-            })
-}
-
-private fun DrawScope.drawRating(
-    rating: Float,
-    image: ImageBitmap,
-    imageFull: ImageBitmap,
-    space: Float
-) {
-
-    val totalCount = 5
-
-    val imageWidth = image.width.toFloat()
-    val imageHeight = size.height
-
-    val reminder = rating - rating.toInt()
-    val ratingInt = (rating - reminder).toInt()
-
-    for (i in 0 until totalCount) {
-
-        val start = imageWidth * i + space * i
-
-        drawImage(
-            image = image,
-            topLeft = Offset(start, 0f)
-        )
-    }
-
-    drawWithLayer {
-        for (i in 0 until totalCount) {
-            val start = imageWidth * i + space * i
-            // Destination
-            drawImage(
-                image = imageFull,
-                topLeft = Offset(start, 0f)
-            )
-        }
-
-        val end = imageWidth * totalCount + space * (totalCount - 1)
-        val start = rating * imageWidth + ratingInt * space
-        val size = end - start
-
-        // Source
-        drawRect(
-            Color.Transparent,
-            topLeft = Offset(start, 0f),
-            size = Size(size, height = imageHeight),
-            blendMode = BlendMode.SrcIn
-        )
-    }
-}
-
-private fun DrawScope.drawWithLayer(block: DrawScope.() -> Unit) {
-    with(drawContext.canvas.nativeCanvas) {
-        val checkPoint = saveLayer(null, null)
-        block()
-        restoreToCount(checkPoint)
     }
 }
 
