@@ -3,4 +3,6 @@
 
     <string name="login_screen_sing_in">Sing in to your account</string>
     <string name="login_screen_log_in_button">Log in</string>
+
+    <string name="tv_shows_list_screen_title">Tv Shows</string>
 </resources>

@@ -86,7 +86,11 @@ fun AnimationSplashContent(
 
         delay(timeMillis = delayScreen)
 
-        navController.navigate(route = NavigationDestinations.LOG_IN_ROUTE)
+        navController.navigate(NavigationDestinations.TV_SHOW_LIST_ROUTE){
+            popUpTo(NavigationDestinations.SPLASHSCREEN_SCREEN) {
+                inclusive = true
+            }
+        }
     }
 }
 

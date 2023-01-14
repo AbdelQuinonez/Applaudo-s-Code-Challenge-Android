@@ -1,7 +1,5 @@
 package com.example.applaudoscodechallengeandroid.utils
 
-import androidx.datastore.preferences.core.stringPreferencesKey
-
 object Constants {
     const val EMPTY_STRING = ""
     const val DATA_STORE_NAME = "applaudosDataStore"
@@ -20,11 +18,16 @@ object Constants {
     const val NO_ERROR_MESSAGE = ""
     const val NO_IMAGE_RESOURCE = 0
 
-    //DataStore constants
+    //Navigation
+    const val GO_BACK_AND_REFRESH = "go_back_and_refresh"
+    const val REFRESH = "refresh"
+
+    //DataStore
     const val PREFERENCES_KEY_USER_API_TOKEN = "user_api_token"
     const val PREFERENCES_KEY_USER_LOGIN_TOKEN = "user_login_token"
     const val PREFERENCES_KEY_USER_EMAIL = "user_email"
     const val PREFERENCES_KEY_USER_NAME = "user_name"
 
-    const val API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzkzZDJhYTQ1ODk4NDgyNWQzNGNkMDUxNzg3YjU4NSIsInN1YiI6IjYzYmRiNTg4ZmE0MDQ2MDA4NzU3MzcxNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FELVUEQDbZHwXm2fikIJ57kiOgWn9X2Ge21jflX6JAQ"
+    const val API_TOKEN =
+        "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzkzZDJhYTQ1ODk4NDgyNWQzNGNkMDUxNzg3YjU4NSIsInN1YiI6IjYzYmRiNTg4ZmE0MDQ2MDA4NzU3MzcxNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FELVUEQDbZHwXm2fikIJ57kiOgWn9X2Ge21jflX6JAQ"
 }
