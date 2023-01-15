@@ -2,6 +2,7 @@ package com.example.applaudoscodechallengeandroid.di
 
 import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
 import com.example.applaudoscodechallengeandroid.localdatasource.database.daos.TvShowDao
+import com.example.applaudoscodechallengeandroid.localdatasource.database.daos.TvShowSeasonDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,5 +17,9 @@ object DaoModule {
     @Singleton
     fun provideTvShowDao(appDatabase: AppDatabase): TvShowDao =
         appDatabase.tvShow()
+
+    @Provides
+    @Singleton fun provideTvShowSeasonDao(appDatabase: AppDatabase): TvShowSeasonDao =
+        appDatabase.tvShowSeason()
 
 }

@@ -71,25 +71,24 @@ data class TvShowDetailsResponseModel (
     val voteCount: Int = 0
 ){
     fun mapFromRemoteToDomainModel(
-        tvShowDetailsResponseModel: TvShowDetailsResponseModel
     ): TvShowDetailsCacheModel {
         return TvShowDetailsCacheModel(
-            id = tvShowDetailsResponseModel.id,
-            posterPath = tvShowDetailsResponseModel.posterPath,
-            popularity = tvShowDetailsResponseModel.popularity,
-            overview = tvShowDetailsResponseModel.overview
+            id = this.id,
+            posterPath = this.posterPath,
+            popularity = this.popularity,
+            overview = this.overview,
+            seasons = mapSeasonFromRemoteToDomainModel(this.id)
         )
     }
 
-    fun mapSeasonFromRemoteToDomainModel(
-        tvShowDetailsResponseModel: TvShowDetailsResponseModel
+    private fun mapSeasonFromRemoteToDomainModel(
+        tvId : Int
     ): List<TvShowSeasonCacheModel>{
-        val seasonList = tvShowDetailsResponseModel.seasons
-        return List(seasonList.size){ i ->
-            val season = seasonList[i]
+        return List(seasons.size){ i ->
+            val season = seasons[i]
             TvShowSeasonCacheModel(
                 id = season.id,
-                tvId = tvShowDetailsResponseModel.id,
+                tvId = tvId,
                 name = season.name,
                 overview = season.overview,
                 posterPath = season.posterPath,

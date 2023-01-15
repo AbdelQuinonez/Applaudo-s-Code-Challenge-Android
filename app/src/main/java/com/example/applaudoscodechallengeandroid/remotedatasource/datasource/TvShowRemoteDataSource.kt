@@ -6,6 +6,6 @@ import com.example.applaudoscodechallengeandroid.remotedatasource.responsemodel.
 interface TvShowRemoteDataSource {
 
     suspend fun getTvShows(): TvShowsResponseModel
-    suspend fun getTvShowDetails(tvId: String): TvShowDetailsResponseModel
+    suspend fun getTvShowDetails(tvId: Int): TvShowDetailsResponseModel
 
 }

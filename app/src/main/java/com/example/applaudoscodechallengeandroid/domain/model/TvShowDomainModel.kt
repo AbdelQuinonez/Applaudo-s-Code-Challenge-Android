@@ -4,5 +4,7 @@ data class TvShowDomainModel(
     val id: Int = 0,
     val name: String = "",
     val posterPath : String = "",
+    val popularity: Double = 0.0,
     val voteAverage : Double = 0.0,
+    val seasons: List<TvShowSeasonDomainModel>
 )

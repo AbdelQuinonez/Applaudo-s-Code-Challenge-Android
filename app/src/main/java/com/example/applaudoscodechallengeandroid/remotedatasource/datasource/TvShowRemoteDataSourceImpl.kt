@@ -13,7 +13,7 @@ class TvShowRemoteDataSourceImpl @Inject constructor(
         tvShowService.getOnTheAirTvShows()
 
 
-    override suspend fun getTvShowDetails(tvId: String): TvShowDetailsResponseModel =
+    override suspend fun getTvShowDetails(tvId: Int): TvShowDetailsResponseModel =
         tvShowService.getTvShowDetails(tvId)
 
 }

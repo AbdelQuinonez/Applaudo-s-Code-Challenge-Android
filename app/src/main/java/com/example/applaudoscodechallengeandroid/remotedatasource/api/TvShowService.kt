@@ -20,6 +20,6 @@ interface TvShowService {
     suspend fun getTopRatedTvShows(): TvShowsResponseModel
 
     @GET("/3/tv/{tv_id}")
-    suspend fun getTvShowDetails(@Path("tv_id") tvId: String): TvShowDetailsResponseModel
+    suspend fun getTvShowDetails(@Path("tv_id") tvId: Int): TvShowDetailsResponseModel
 
 }

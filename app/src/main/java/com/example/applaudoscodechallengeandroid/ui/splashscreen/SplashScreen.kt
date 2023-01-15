@@ -33,6 +33,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashRoute(
     navController: NavController,
+    //Used to init the API token (verify inner init method)
     viewModel: SplashScreenViewModel = hiltViewModel()
 ) {
     SplashScreen(

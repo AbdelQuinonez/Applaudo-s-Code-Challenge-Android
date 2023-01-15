@@ -12,7 +12,7 @@ interface TvShowDao {
     suspend fun getAll(): List<TvShowCacheModel>
 
     @Query("SELECT * FROM TvShowCacheModel WHERE id = :id")
-    suspend fun getTvShow(id: String): TvShowCacheModel
+    suspend fun getTvShow(id: Int): TvShowCacheModel
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(tvShowsCache: List<TvShowCacheModel>): List<Long>

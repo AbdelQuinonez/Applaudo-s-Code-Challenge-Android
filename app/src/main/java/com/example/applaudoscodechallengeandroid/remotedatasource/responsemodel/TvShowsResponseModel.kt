@@ -23,7 +23,8 @@ data class TvShowsResponseModel(
                     id = result.id,
                     name = result.name,
                     posterPath = result.posterPath,
-                    voteAverage = result.voteAverage
+                    voteAverage = result.voteAverage,
+                    popularity = result.popularity
                 )
             )
         }
