@@ -6,5 +6,5 @@ data class TvShowDomainModel(
     val posterPath : String = "",
     val popularity: Double = 0.0,
     val voteAverage : Double = 0.0,
-    val seasons: List<TvShowSeasonDomainModel>
+    val seasons: List<TvShowSeasonDomainModel> = listOf()
 )
