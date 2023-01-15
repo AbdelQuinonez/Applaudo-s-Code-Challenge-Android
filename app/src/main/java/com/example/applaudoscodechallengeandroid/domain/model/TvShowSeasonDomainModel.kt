@@ -5,5 +5,6 @@ class TvShowSeasonDomainModel(
     val name: String = "",
     val overview: String = "",
     val posterPath: String = "",
+    val episodeCount: Int = 0,
     val seasonNumber: Int = 0
 )

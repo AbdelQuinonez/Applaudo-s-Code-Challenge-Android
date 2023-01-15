@@ -5,4 +5,7 @@
     <string name="login_screen_log_in_button">Log in</string>
 
     <string name="tv_shows_list_screen_title">Tv Shows</string>
+
+    <string name="tv_shows_season_episodes_number">%1$i Episodes</string>
+
 </resources>

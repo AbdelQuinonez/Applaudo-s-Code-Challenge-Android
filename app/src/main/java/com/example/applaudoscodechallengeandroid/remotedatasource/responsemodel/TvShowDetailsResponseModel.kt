@@ -93,7 +93,8 @@ data class TvShowDetailsResponseModel (
                 name = season.name,
                 overview = season.overview,
                 posterPath = season.posterPath,
-                seasonNumber = season.seasonNumber
+                seasonNumber = season.seasonNumber,
+                episodeCount = season.episodeCount
             )
         }
     }

@@ -9,7 +9,6 @@
     //Login Screen
     <dimen name="login_screen_margin_between_components">24dp</dimen>
 
-    <dimen name="default_card_corner_radius">12dp</dimen>
 
     //TvShowListScreen
     <dimen name="tv_show_list_space_between_items">16dp</dimen>
@@ -25,6 +24,12 @@
     <dimen name="tv_show_component_image_min_width_size">136dp</dimen>
     <dimen name="tv_show_component_image_min_height_size">156dp</dimen>
     <dimen name="tv_show_component_space_between_stars">4dp</dimen>
+
+    //TvShowSeasonComponent
+    <dimen name="tv_show_season_component_elevation">3dp</dimen>
+    <dimen name="tv_show_season_component_image_min_width_size">112dp</dimen>
+    <dimen name="tv_show_season_component_image_min_height_size">147dp</dimen>
+    <dimen name="tv_show_season_component_body_text_margin">8dp</dimen>
 
     //SortChip
     <dimen name="sort_chip_elevation">4dp</dimen>

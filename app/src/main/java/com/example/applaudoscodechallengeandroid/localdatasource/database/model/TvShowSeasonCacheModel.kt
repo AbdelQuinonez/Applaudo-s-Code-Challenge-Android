@@ -15,5 +15,7 @@ class TvShowSeasonCacheModel(
     @ColumnInfo
     val posterPath: String = "",
     @ColumnInfo
-    val seasonNumber: Int = 0
+    val seasonNumber: Int = 0,
+    @ColumnInfo
+    val episodeCount: Int = 0
 )
