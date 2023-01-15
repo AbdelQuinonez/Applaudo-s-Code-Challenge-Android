@@ -17,7 +17,7 @@ fun LoadAsyncImages(
     )
     val isErrorState = when (remoteImagePainter.state) {
         is AsyncImagePainter.State.Error,
-        is AsyncImagePainter.State.Loading,
+        is AsyncImagePainter.State.Loading
         -> true
         else -> false
     }

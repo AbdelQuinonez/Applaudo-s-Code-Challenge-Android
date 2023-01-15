@@ -24,6 +24,7 @@
     <dimen name="tv_show_component_start_text_padding">8dp</dimen>
     <dimen name="tv_show_component_image_min_width_size">136dp</dimen>
     <dimen name="tv_show_component_image_min_height_size">156dp</dimen>
+    <dimen name="tv_show_component_space_between_stars">4dp</dimen>
 
     //SortChip
     <dimen name="sort_chip_elevation">4dp</dimen>

@@ -7,8 +7,17 @@ import retrofit2.http.Path
 
 interface TvShowService {
 
+    @GET("/3/tv/airing_today")
+    suspend fun getAiringTodayTvShows(): TvShowsResponseModel
+
     @GET("/3/tv/on_the_air")
-    suspend fun getTvShows(): TvShowsResponseModel
+    suspend fun getOnTheAirTvShows(): TvShowsResponseModel
+
+    @GET("/3/tv/popular")
+    suspend fun getPopularTvShows(): TvShowsResponseModel
+
+    @GET("/3/tv/top_rated")
+    suspend fun getTopRatedTvShows(): TvShowsResponseModel
 
     @GET("/3/tv/{tv_id}")
     suspend fun getTvShowDetails(@Path("tv_id") tvId: String): TvShowDetailsResponseModel

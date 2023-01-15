@@ -38,7 +38,6 @@ fun TvShowComposable(
     tvShowDomainModel: TvShowDomainModel,
     onClick: () -> Unit,
     contentDescription: String = EMPTY_STRING,
-    @DrawableRes localResource: Int = NO_IMAGE_RESOURCE,
 ) {
 
     Surface(
@@ -57,7 +56,8 @@ fun TvShowComposable(
                 Image(
                     painter = rememberAsyncImagePainter(
                         model = BuildConfig.BASE_IMAGE_URL + tvShowDomainModel.posterPath,
-                        error = painterResource(R.drawable.ic_no_image)
+                        error = painterResource(R.drawable.ic_no_image),
+                        placeholder = painterResource(id = R.drawable.ic_downloading)
                     ),
                     contentDescription = contentDescription,
                     modifier = Modifier
@@ -99,7 +99,7 @@ fun TvShowComposable(
                 ) {
                     RatingBar(
                         rating = tvShowDomainModel.voteAverage.toFloat(),
-                        spaceBetween = 4.dp
+                        spaceBetween = dimensionResource(id = R.dimen.tv_show_component_space_between_stars)
                     )
                     Text(
                         modifier = Modifier.padding(start = dimensionResource(id = R.dimen.tv_show_component_start_text_padding)),
