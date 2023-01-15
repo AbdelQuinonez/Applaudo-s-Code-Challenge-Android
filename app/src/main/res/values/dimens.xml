@@ -31,6 +31,12 @@
     <dimen name="tv_show_season_component_image_min_height_size">147dp</dimen>
     <dimen name="tv_show_season_component_body_text_margin">8dp</dimen>
 
+    //TvShowDetails
+    <dimen name="tv_show_details_main_image_height">232dp</dimen>
+    <dimen name="tv_show_details_space_between_items">16dp</dimen>
+    <dimen name="tv_show_details_summary_top_margin">24dp</dimen>
+    <dimen name="tv_show_details_overview_top_margin">8dp</dimen>
+
     //SortChip
     <dimen name="sort_chip_elevation">4dp</dimen>
     <dimen name="sort_chip_horizontal_padding">16dp</dimen>

@@ -8,6 +8,8 @@ object Constants {
     const val RECOMMENDED_ANIMATION_DURATION = 1000
     const val SPLASH_SCREEN_DELAY_DURATION = 1500L
     const val CONTENT_DESCRIPTION_IMAGE_LOGIN_SCREEN = "loginScreenImageContentDescription"
+    const val CONTENT_DESCRIPTION_IMAGE_TV_SHOW_DETAILS = "contentDescriptionImageTvShowDetails"
+    const val CONTENT_DESCRIPTION_GO_BACK_BUTTON = "contentDescriptionGoBackButton"
 
     //Errors
     const val ERROR_UNKNOWN = "UNKNOWN_ERROR"
@@ -17,6 +19,7 @@ object Constants {
     const val API_RESPONSE_CODE_404 = 404
     const val NO_ERROR_MESSAGE = ""
     const val NO_IMAGE_RESOURCE = 0
+    const val INVALID_ID = -1
 
     //Navigation
     const val GO_BACK_AND_REFRESH = "go_back_and_refresh"

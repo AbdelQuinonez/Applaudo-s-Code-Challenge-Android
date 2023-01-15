@@ -6,6 +6,7 @@ import com.example.applaudoscodechallengeandroid.core.successOr
 import com.example.applaudoscodechallengeandroid.domain.interactors.GetTvShowDetailsUseCase
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.state.TvShowDetailsUiState
+import com.example.applaudoscodechallengeandroid.utils.Constants.INVALID_ID
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -22,14 +23,18 @@ class TvShowDetailsViewModel @Inject constructor(
 
     val uiState: StateFlow<TvShowDetailsUiState> = _uiState
 
-    private var tvId: Int = 0
+    private var tvId: Int = INVALID_ID
 
     fun setTvId(tvId: Int) {
         this.tvId = tvId
         getTvShowWithSeasons()
     }
 
-    fun getTvShowWithSeasons() {
+    fun getTvId(): Int {
+        return tvId
+    }
+
+    private fun getTvShowWithSeasons() {
         viewModelScope.launch {
             _uiState.update {
                 it.copy(

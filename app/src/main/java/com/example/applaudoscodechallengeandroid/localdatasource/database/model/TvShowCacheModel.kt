@@ -16,7 +16,9 @@ data class TvShowCacheModel(
     @ColumnInfo
     val posterPath: String = "",
     @ColumnInfo
-    val popularity: Double = 0.0
+    val popularity: Double = 0.0,
+    @ColumnInfo
+    val overview: String = ""
 ){
     fun mapFromCacheToDomain(): TvShowDomainModel{
         return TvShowDomainModel(
@@ -24,7 +26,8 @@ data class TvShowCacheModel(
             name = this.name,
             voteAverage = this.voteAverage,
             posterPath = this.posterPath,
-            popularity = this.popularity
+            popularity = this.popularity,
+            overview = this.overview
         )
     }
 

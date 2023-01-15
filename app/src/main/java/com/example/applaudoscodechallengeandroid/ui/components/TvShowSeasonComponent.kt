@@ -44,8 +44,6 @@ fun TvShowSeasonComponent(
                 ),
                 contentDescription = contentDescription,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight(0.5f)
                     .widthIn(
                         min = dimensionResource(id = R.dimen.tv_show_season_component_image_min_width_size),
                         max = dimensionResource(id = R.dimen.tv_show_season_component_image_min_width_size)
