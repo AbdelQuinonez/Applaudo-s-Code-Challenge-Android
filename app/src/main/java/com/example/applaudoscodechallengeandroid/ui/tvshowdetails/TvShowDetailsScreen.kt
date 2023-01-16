@@ -30,6 +30,9 @@ import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.state.TvShowDe
 import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_GO_BACK_BUTTON
 import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_IMAGE_TV_SHOW_DETAILS
 import com.example.applaudoscodechallengeandroid.utils.Constants.INVALID_ID
+import me.onebone.toolbar.CollapsingToolbarScaffold
+import me.onebone.toolbar.ScrollStrategy
+import me.onebone.toolbar.rememberCollapsingToolbarScaffoldState
 
 @Composable
 fun TvShowDetailsRoute(
@@ -57,9 +60,11 @@ fun TvShowDetailsScreen(
     uiState: TvShowDetailsUiState,
     goBack: () -> Unit
 ) {
-
-    Scaffold(
-        topBar = {
+    CollapsingToolbarScaffold(
+        modifier = Modifier,
+        scrollStrategy = ScrollStrategy.EnterAlways,
+        state = rememberCollapsingToolbarScaffoldState(),
+        toolbar = {
             TopAppBar(
                 title = {
                     Text(
@@ -75,16 +80,15 @@ fun TvShowDetailsScreen(
                 }
             )
         },
-        content = {
-            Column {
-                ImageHeader(tvShowDomainModel = uiState.tvShowDomainModel)
+    ){
+        Column {
+            ImageHeader(tvShowDomainModel = uiState.tvShowDomainModel)
 
-                TvShowDescription(tvShowDomainModel = uiState.tvShowDomainModel)
+            TvShowDescription(tvShowDomainModel = uiState.tvShowDomainModel)
 
-                SeasonList(tvShowSeasonDomainModelList = uiState.tvShowDomainModel.seasons)
-            }
+            SeasonList(tvShowSeasonDomainModelList = uiState.tvShowDomainModel.seasons)
         }
-    )
+    }
 }
 
 @Composable
