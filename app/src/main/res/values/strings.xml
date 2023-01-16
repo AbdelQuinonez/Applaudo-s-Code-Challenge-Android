@@ -6,7 +6,7 @@
 
     <string name="tv_shows_list_screen_title">Tv Shows</string>
 
-    <string name="tv_shows_season_episodes_number">%1$i Episodes</string>
+    <string name="tv_shows_season_episodes_number">%1$s Episodes</string>
 
     <string name="tv_show_details_summary">Summary</string>
 </resources>

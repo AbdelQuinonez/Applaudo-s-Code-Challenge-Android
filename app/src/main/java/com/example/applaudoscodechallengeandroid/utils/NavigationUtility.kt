@@ -22,18 +22,6 @@ fun NavHostController.navigateTo(screenRoute: String) {
     }
 }
 
-fun NavHostController.shouldRefreshScreen(): Boolean {
-    if (this.currentBackStackEntry?.savedStateHandle?.contains(GO_BACK_AND_REFRESH) == true) {
-        val keyData = this.currentBackStackEntry?.savedStateHandle?.get<String>(
-            GO_BACK_AND_REFRESH
-        ) ?: EMPTY_STRING
-
-        if (keyData == REFRESH)
-            return true
-    }
-    return false
-}
-
-fun NavHostController.removeRefresh() {
-    this.currentBackStackEntry?.savedStateHandle?.remove<String>(GO_BACK_AND_REFRESH)
+fun NavHostController.goBack() {
+    this.popBackStack()
 }

@@ -10,6 +10,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import coil.compose.rememberAsyncImagePainter
 import com.example.applaudoscodechallengeandroid.BuildConfig
 import com.example.applaudoscodechallengeandroid.R
@@ -75,6 +76,8 @@ fun TvShowSeasonComponent(
                 )
                 Text(
                     text = tvShowSeasonDomainModel.overview,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 3,
                     color = TEXT,
                     style = ApplaudosTypography.body2
                 )

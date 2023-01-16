@@ -36,6 +36,7 @@
     <dimen name="tv_show_details_space_between_items">16dp</dimen>
     <dimen name="tv_show_details_summary_top_margin">24dp</dimen>
     <dimen name="tv_show_details_overview_top_margin">8dp</dimen>
+    <dimen name="tv_show_details_overview_elevation">4dp</dimen>
 
     //SortChip
     <dimen name="sort_chip_elevation">4dp</dimen>

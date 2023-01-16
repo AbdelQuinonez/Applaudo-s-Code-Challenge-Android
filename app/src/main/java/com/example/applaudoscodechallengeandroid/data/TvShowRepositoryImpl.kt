@@ -24,8 +24,8 @@ class TvShowRepositoryImpl @Inject constructor(
 
     override suspend fun getTvShowDetails(tvId: Int): DataState<TvShowDetailsCacheModel> {
         return try{
-            val tvShowDetailsCacheModel = tvShowRemoteDataSource.getTvShowDetails(tvId).mapFromRemoteToDomainModel()
-            DataState.success(tvShowDetailsCacheModel)
+            val tvShowCacheModel = tvShowRemoteDataSource.getTvShowDetails(tvId).mapFromRemoteToCacheModel()
+            DataState.success(tvShowCacheModel)
         } catch ( e: Exception){
             val errorModel = ErrorHandling.handleError(e)
             DataState.failure(errorModel)

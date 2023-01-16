@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.example.applaudoscodechallengeandroid.navigation.graph.logInNavGraph
 import com.example.applaudoscodechallengeandroid.navigation.graph.splashNavGraph
+import com.example.applaudoscodechallengeandroid.navigation.graph.tvShowListNavGraph
 
 
 @Composable
@@ -21,5 +22,6 @@ fun MainNavigation(
     {
         splashNavGraph(navController)
         logInNavGraph(navController)
+        tvShowListNavGraph(navController)
     }
 }

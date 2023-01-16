@@ -1,29 +1,26 @@
 package com.example.applaudoscodechallengeandroid.navigation.graph
 
-import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinations
-import com.example.applaudoscodechallengeandroid.ui.splashscreen.SplashRoute
-import com.example.applaudoscodechallengeandroid.utils.removeRefresh
-import com.example.applaudoscodechallengeandroid.utils.shouldRefreshScreen
+import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.TvShowDetailsRoute
+import com.example.applaudoscodechallengeandroid.utils.goBack
 
 fun NavGraphBuilder.tvShowListNavGraph(navController: NavHostController) {
 
-    navigation (
-        startDestination = NavigationDestinations.TV_SHOW_LIST_SCREEN,
-        route = NavigationDestinations.TV_SHOW_LIST_ROUTE){
+    navigation(
+        startDestination = NavigationDestinations.TV_SHOW_DETAILS_ROUTE,
+        route = NavigationDestinations.TV_SHOW_DETAILS_SCREEN
+    ) {
 
-        composable(route ="${NavigationDestinations.TV_SHOW_DETAILS_SCREEN}/{${NavigationDestinations.TV_SHOW_ID}}") {
+        composable(route = "${NavigationDestinations.TV_SHOW_DETAILS_SCREEN}/{${NavigationDestinations.TV_ID}}") {
 
-            val tvShowId = it.arguments?.getInt(NavigationDestinations.TV_SHOW_ID)
-            val shouldRefreshScreen = navController.shouldRefreshScreen()
+            val tvId = it.arguments?.getString(NavigationDestinations.TV_ID)?.toInt() ?: 0
 
-            TODO("create and open tv show detail screen")
+            TvShowDetailsRoute(tvId = tvId, goBack = navController::goBack)
 
-            navController.removeRefresh()
         }
     }
 

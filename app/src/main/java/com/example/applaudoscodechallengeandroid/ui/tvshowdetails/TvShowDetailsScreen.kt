@@ -23,7 +23,9 @@ import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowSeasonDomainModel
 import com.example.applaudoscodechallengeandroid.ui.components.TvShowSeasonComponent
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
+import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
 import com.example.applaudoscodechallengeandroid.ui.theme.WHITE
+import com.example.applaudoscodechallengeandroid.ui.theme.primaryColor
 import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.state.TvShowDetailsUiState
 import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_GO_BACK_BUTTON
 import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_IMAGE_TV_SHOW_DETAILS
@@ -77,9 +79,9 @@ fun TvShowDetailsScreen(
             Column {
                 ImageHeader(tvShowDomainModel = uiState.tvShowDomainModel)
 
-                SeasonList(tvShowSeasonDomainModelList = uiState.tvShowDomainModel.seasons)
-
                 TvShowDescription(tvShowDomainModel = uiState.tvShowDomainModel)
+
+                SeasonList(tvShowSeasonDomainModelList = uiState.tvShowDomainModel.seasons)
             }
         }
     )
@@ -110,14 +112,18 @@ fun ImageHeader(
 fun TvShowDescription(
     tvShowDomainModel: TvShowDomainModel
 ) {
-    Column {
+    Column(
+        modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.default_screen_margin))
+    ) {
         Text(
             modifier = Modifier.padding(
                 top = dimensionResource(
                     id = R.dimen.tv_show_details_summary_top_margin
                 )
             ),
-            text = stringResource(id = R.string.tv_show_details_summary)
+            text = stringResource(id = R.string.tv_show_details_summary),
+            color = primaryColor,
+            style = ApplaudosTypography.h6,
         )
         Text(
             modifier = Modifier.padding(
@@ -125,8 +131,11 @@ fun TvShowDescription(
                     id = R.dimen.tv_show_details_overview_top_margin
                 )
             ),
-            text = tvShowDomainModel.overview
+            text = tvShowDomainModel.overview,
+            color = TEXT,
+            style = ApplaudosTypography.body2
         )
+
     }
 }
 

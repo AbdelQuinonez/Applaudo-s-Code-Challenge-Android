@@ -1,11 +1,10 @@
 package com.example.applaudoscodechallengeandroid.remotedatasource.responsemodel
 
-import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowDetailsCacheModel
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowSeasonCacheModel
 import com.google.gson.annotations.SerializedName
 
-data class TvShowDetailsResponseModel (
+data class TvShowDetailsResponseModel(
 
     @field:SerializedName("backdrop_path")
     val backdropPath: String = "",
@@ -30,9 +29,9 @@ data class TvShowDetailsResponseModel (
     @field:SerializedName("last_episode_to_air")
     val lastEpisodeToAir: LastEpisodeToAir = LastEpisodeToAir(),
     @field:SerializedName("name")
-    val name: String = "",
-    @field:SerializedName("next_episode_to_air")
-    val nextEpisodeToAir: String = "",
+    val name: String? = "",
+    @SerializedName("next_episode_to_air")
+    val nextEpisodeToAir: NextEpisodeToAir = NextEpisodeToAir(),
     @field:SerializedName("networks")
     val networks: List<Networks> = listOf(),
     @field:SerializedName("number_of_episodes")
@@ -46,11 +45,11 @@ data class TvShowDetailsResponseModel (
     @field:SerializedName("original_name")
     val originalName: String = "",
     @field:SerializedName("overview")
-    val overview: String = "",
+    val overview: String? = "",
     @field:SerializedName("popularity")
     val popularity: Double = 0.0,
     @field:SerializedName("poster_path")
-    val posterPath: String = "",
+    val posterPath: String? = "",
     @field:SerializedName("production_companies")
     val productionCompanies: List<ProductionCompanies> = listOf(),
     @field:SerializedName("production_countries")
@@ -70,28 +69,29 @@ data class TvShowDetailsResponseModel (
     @field:SerializedName("vote_count")
     val voteCount: Int = 0
 ){
-    fun mapFromRemoteToDomainModel(
+    fun mapFromRemoteToCacheModel(
     ): TvShowDetailsCacheModel {
         return TvShowDetailsCacheModel(
             id = this.id,
-            posterPath = this.posterPath,
+            name = this.name.orEmpty(),
+            posterPath = this.posterPath.orEmpty(),
             popularity = this.popularity,
-            overview = this.overview,
-            seasons = mapSeasonFromRemoteToDomainModel(this.id)
+            overview = this.overview.orEmpty(),
+            seasons = mapSeasonFromRemoteToCacheModel(this.id)
         )
     }
 
-    private fun mapSeasonFromRemoteToDomainModel(
-        tvId : Int
-    ): List<TvShowSeasonCacheModel>{
-        return List(seasons.size){ i ->
+    private fun mapSeasonFromRemoteToCacheModel(
+        tvId: Int
+    ): List<TvShowSeasonCacheModel> {
+        return List(seasons.size) { i ->
             val season = seasons[i]
             TvShowSeasonCacheModel(
                 id = season.id,
                 tvId = tvId,
-                name = season.name,
-                overview = season.overview,
-                posterPath = season.posterPath,
+                name = season.name.orEmpty(),
+                overview = season.overview.orEmpty(),
+                posterPath = season.posterPath.orEmpty(),
                 seasonNumber = season.seasonNumber,
                 episodeCount = season.episodeCount
             )
@@ -155,8 +155,8 @@ data class Networks(
 
 data class ProductionCompanies(
 
-    @field:SerializedName("id") val
-    id: Int = 0,
+    @field:SerializedName("id")
+    val id: Int = 0,
     @field:SerializedName("logo_path")
     val logoPath: String = "",
     @field:SerializedName("name")
@@ -181,11 +181,11 @@ data class Seasons(
     @field:SerializedName("id")
     val id: Int = 0,
     @field:SerializedName("name")
-    val name: String = "",
+    val name: String? = "",
     @field:SerializedName("overview")
-    val overview: String = "",
+    val overview: String? = "",
     @field:SerializedName("poster_path")
-    val posterPath: String = "",
+    val posterPath: String? = "",
     @field:SerializedName("season_number")
     val seasonNumber: Int = 0
 )
@@ -197,4 +197,31 @@ data class SpokenLanguages(
     val iso6391: String = "",
     @field:SerializedName("name")
     val name: String = ""
+)
+
+data class NextEpisodeToAir(
+    @SerializedName("air_date") 
+    val airDate: String = "",
+    @SerializedName("episode_number") 
+    val episodeNumber: Int = 0,
+    @SerializedName("id") 
+    val id: Int = 0,
+    @SerializedName("name") 
+    val name: String = "",
+    @SerializedName("overview") 
+    val overview: String = "",
+    @SerializedName("production_code") 
+    val productionCode: String = "",
+    @SerializedName("runtime") 
+    val runtime: String = "",
+    @SerializedName("season_number") 
+    val seasonNumber: Int = 0,
+    @SerializedName("show_id") 
+    val showId: Int = 0,
+    @SerializedName("still_path") 
+    val stillPath: String = "",
+    @SerializedName("vote_average") 
+    val voteAverage: Int = 0,
+    @SerializedName("vote_count") 
+    val voteCount: Int = 0
 )
