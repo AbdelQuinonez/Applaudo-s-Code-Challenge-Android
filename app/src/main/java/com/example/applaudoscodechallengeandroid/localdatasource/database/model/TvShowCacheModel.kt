@@ -28,6 +28,7 @@ data class TvShowCacheModel(
         return TvShowDomainModel(
             id = this.id,
             name = this.name,
+            originalName = this.originalName,
             voteAverage = this.voteAverage,
             posterPath = this.posterPath,
             popularity = this.popularity,

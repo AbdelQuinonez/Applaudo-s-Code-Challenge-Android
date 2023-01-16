@@ -21,11 +21,12 @@ data class TvShowsResponseModel(
             tvShowCacheModelList.add(
                 TvShowCacheModel(
                     id = result.id,
-                    name = result.name,
-                    posterPath = result.posterPath,
+                    name = result.name.orEmpty(),
+                    posterPath = result.posterPath.orEmpty(),
                     voteAverage = result.voteAverage,
                     popularity = result.popularity,
-                    overview = result.overview
+                    overview = result.overview.orEmpty(),
+                    originalName = result.originalName.orEmpty()
                 )
             )
         }
@@ -36,7 +37,7 @@ data class TvShowsResponseModel(
 
 data class Results(
     @SerializedName("poster_path")
-    val posterPath: String = "",
+    val posterPath: String? = "",
     @SerializedName("popularity")
     val popularity: Double = 0.0,
     @SerializedName("id")
@@ -46,7 +47,7 @@ data class Results(
     @SerializedName("vote_average")
     val voteAverage: Double = 0.0,
     @SerializedName("overview")
-    val overview: String = "",
+    val overview: String? = "",
     @SerializedName("first_air_date")
     val firstAirDate: String = "",
     @SerializedName("origin_country")
@@ -58,9 +59,9 @@ data class Results(
     @SerializedName("vote_count")
     val voteCount: Int = 0,
     @SerializedName("name")
-    val name: String = "",
+    val name: String? = "",
     @SerializedName("original_name")
-    val originalName: String = ""
+    val originalName: String? = ""
 )
 
 

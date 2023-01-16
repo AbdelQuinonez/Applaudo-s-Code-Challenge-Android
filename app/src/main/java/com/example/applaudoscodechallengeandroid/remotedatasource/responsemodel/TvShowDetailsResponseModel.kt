@@ -43,7 +43,7 @@ data class TvShowDetailsResponseModel(
     @field:SerializedName("original_language")
     val originalLanguage: String = "",
     @field:SerializedName("original_name")
-    val originalName: String = "",
+    val originalName: String? = "",
     @field:SerializedName("overview")
     val overview: String? = "",
     @field:SerializedName("popularity")
@@ -75,6 +75,8 @@ data class TvShowDetailsResponseModel(
             id = this.id,
             name = this.name.orEmpty(),
             posterPath = this.posterPath.orEmpty(),
+            originalName = this.originalName.orEmpty(),
+            voteAverage = this.voteAverage,
             popularity = this.popularity,
             overview = this.overview.orEmpty(),
             seasons = mapSeasonFromRemoteToCacheModel(this.id)
