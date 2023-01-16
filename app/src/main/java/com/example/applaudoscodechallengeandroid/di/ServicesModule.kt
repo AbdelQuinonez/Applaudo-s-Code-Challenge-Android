@@ -1,7 +1,6 @@
 package com.example.applaudoscodechallengeandroid.di
 
 import com.example.applaudoscodechallengeandroid.remotedatasource.api.TvShowService
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -3,7 +3,6 @@ package com.example.applaudoscodechallengeandroid.localdatasource.database.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowSeasonDomainModel
 
 @Entity

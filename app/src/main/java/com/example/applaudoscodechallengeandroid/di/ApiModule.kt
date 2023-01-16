@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import com.example.applaudoscodechallengeandroid.BuildConfig
+import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

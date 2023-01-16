@@ -1,6 +1,5 @@
 package com.example.applaudoscodechallengeandroid.utils
 
-import com.example.applaudoscodechallengeandroid.utils.AppDispatcher
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject

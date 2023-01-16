@@ -2,9 +2,6 @@ package com.example.applaudoscodechallengeandroid.utils
 
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import com.example.applaudoscodechallengeandroid.utils.Constants.EMPTY_STRING
-import com.example.applaudoscodechallengeandroid.utils.Constants.GO_BACK_AND_REFRESH
-import com.example.applaudoscodechallengeandroid.utils.Constants.REFRESH
 
 fun NavHostController.navigateTo(screenRoute: String) {
     this.navigate(screenRoute) {

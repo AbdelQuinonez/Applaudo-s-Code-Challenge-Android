@@ -1,7 +1,5 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.example.applaudoscodechallengeandroid.remotedatasource.datasource.TvShowRemoteDataSource
-import com.example.applaudoscodechallengeandroid.remotedatasource.datasource.TvShowRemoteDataSourceImpl
 import com.example.applaudoscodechallengeandroid.utils.AppDispatcher
 import com.example.applaudoscodechallengeandroid.utils.AppDispatcherImpl
 import dagger.Binds
