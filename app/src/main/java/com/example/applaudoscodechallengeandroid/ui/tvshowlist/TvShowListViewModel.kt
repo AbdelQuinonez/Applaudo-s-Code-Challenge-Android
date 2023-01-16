@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.applaudoscodechallengeandroid.core.successOr
 import com.example.applaudoscodechallengeandroid.domain.interactors.GetTvShowsUseCase
+import com.example.applaudoscodechallengeandroid.domain.model.SortBy
 import com.example.applaudoscodechallengeandroid.domain.model.getSortBy
 import com.example.applaudoscodechallengeandroid.ui.tvshowlist.state.TvShowListUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -49,23 +50,55 @@ class TvShowListViewModel @Inject constructor(
         }
     }
 
-    fun sortBy(value : String){
+    fun sortBy(value: String) {
 
-        _uiState.update {
-            it.copy(
-                loading = true
-            )
+        viewModelScope.launch {
+            _uiState.update {
+                it.copy(
+                    loading = true
+                )
+            }
+
+            val unSortedList = _uiState.value.tvShowDomainModelList
+
+            when (getSortBy(value)) {
+                SortBy.TOP_RATED -> {
+                    _uiState.update { TvShowDomainModel ->
+                        TvShowDomainModel.copy(
+                            loading = false,
+                            tvShowDomainModelList = unSortedList.sortedByDescending { it.voteAverage },
+                            sortBy = getSortBy(value)
+                        )
+                    }
+                }
+                SortBy.POPULAR -> {
+                    _uiState.update { TvShowDomainModel ->
+                        TvShowDomainModel.copy(
+                            loading = false,
+                            tvShowDomainModelList = unSortedList.sortedByDescending { it.popularity },
+                            sortBy = getSortBy(value)
+                        )
+                    }
+                }
+                SortBy.ON_TV -> {
+                    _uiState.update { TvShowDomainModel ->
+                        TvShowDomainModel.copy(
+                            loading = false,
+                            sortBy = getSortBy(value)
+                        )
+                    }
+                }
+                SortBy.AIRING -> {
+                    _uiState.update { TvShowDomainModel ->
+                        TvShowDomainModel.copy(
+                            loading = false,
+                            sortBy = getSortBy(value)
+                        )
+                    }
+                }
+                else -> {}
+            }
         }
-
-        //sort list and update the uiState
-
-        _uiState.update {
-            it.copy(
-                loading = false,
-                sortBy = getSortBy(value)
-            )
-        }
-
     }
 
 

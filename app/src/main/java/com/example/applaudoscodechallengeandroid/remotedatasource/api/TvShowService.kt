@@ -7,6 +7,13 @@ import retrofit2.http.Path
 
 interface TvShowService {
 
+
+    /*
+    I didn't find any route that will retrieve all the data from a single request
+    If I had added all the routes, a lot of data would have been repeated
+    Of course that we have OnConflictStrategy.REPLACE, but what about the users Cellular Data / Battery
+     */
+
     @GET("/3/tv/on_the_air")
     suspend fun getOnTheAirTvShows(): TvShowsResponseModel
 
