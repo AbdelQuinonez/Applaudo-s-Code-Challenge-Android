@@ -6,7 +6,7 @@ import com.example.applaudoscodechallengeandroid.data.TestNetworkApi
 import com.example.applaudoscodechallengeandroid.data.TestTvShowRepository
 import com.example.applaudoscodechallengeandroid.domain.interactors.GetTvShowsUseCase
 import com.example.applaudoscodechallengeandroid.ui.tvshowlist.TvShowListViewModel
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TEST_DEFAULT_ID
+import com.example.applaudoscodechallengeandroid.utils.TestingConstants.TEST_DEFAULT_ID
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
