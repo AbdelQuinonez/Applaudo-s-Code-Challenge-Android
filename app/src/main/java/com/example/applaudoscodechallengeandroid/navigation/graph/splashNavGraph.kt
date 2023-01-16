@@ -10,9 +10,10 @@ import com.example.applaudoscodechallengeandroid.ui.tvshowlist.TvShowListRoute
 import com.example.applaudoscodechallengeandroid.utils.navigateTo
 
 fun NavGraphBuilder.splashNavGraph(navController: NavHostController) {
-    navigation (
+    navigation(
         startDestination = NavigationDestinations.SPLASHSCREEN_SCREEN,
-        route = NavigationDestinations.SPLASHSCREEN_ROUTE){
+        route = NavigationDestinations.SPLASHSCREEN_ROUTE
+    ) {
 
         composable(NavigationDestinations.SPLASHSCREEN_SCREEN) {
             SplashRoute(navController)

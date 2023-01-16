@@ -28,12 +28,12 @@ class GetTvShowDetailsUseCase @Inject constructor(
             val noSeasonsTvShowDomainModel = localRepository.getTvShow(tvId).mapFromCacheToDomain()
             val tvShowSeasonCacheModelList = localRepository.getTvShowSeasons(tvId)
             val tvShowDomainModel = noSeasonsTvShowDomainModel.copy(
-                seasons = List(tvShowSeasonCacheModelList.size){ i ->
+                seasons = List(tvShowSeasonCacheModelList.size) { i ->
                     tvShowSeasonCacheModelList[i].mapFromCacheToDomainModel()
                 }
             )
             DataState.success(tvShowDomainModel)
-        }catch ( e: Exception){
+        } catch (e: Exception) {
             val errorModel = ErrorHandling.handleError(e)
             DataState.failure(errorModel)
         }

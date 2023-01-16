@@ -8,9 +8,10 @@ import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinatio
 import com.example.applaudoscodechallengeandroid.ui.login.LoginRoute
 
 fun NavGraphBuilder.logInNavGraph(navController: NavController) {
-    navigation (
+    navigation(
         startDestination = NavigationDestinations.LOG_IN_SCREEN,
-        route = NavigationDestinations.LOG_IN_ROUTE){
+        route = NavigationDestinations.LOG_IN_ROUTE
+    ) {
 
         composable(NavigationDestinations.LOG_IN_SCREEN) {
             LoginRoute(navController = navController)

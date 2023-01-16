@@ -68,7 +68,7 @@ data class TvShowDetailsResponseModel(
     val voteAverage: Double = 0.0,
     @field:SerializedName("vote_count")
     val voteCount: Int = 0
-){
+) {
     fun mapFromRemoteToCacheModel(
     ): TvShowDetailsCacheModel {
         return TvShowDetailsCacheModel(
@@ -202,28 +202,28 @@ data class SpokenLanguages(
 )
 
 data class NextEpisodeToAir(
-    @SerializedName("air_date") 
+    @SerializedName("air_date")
     val airDate: String = "",
-    @SerializedName("episode_number") 
+    @SerializedName("episode_number")
     val episodeNumber: Int = 0,
-    @SerializedName("id") 
+    @SerializedName("id")
     val id: Int = 0,
-    @SerializedName("name") 
+    @SerializedName("name")
     val name: String = "",
-    @SerializedName("overview") 
+    @SerializedName("overview")
     val overview: String = "",
-    @SerializedName("production_code") 
+    @SerializedName("production_code")
     val productionCode: String = "",
-    @SerializedName("runtime") 
+    @SerializedName("runtime")
     val runtime: String = "",
-    @SerializedName("season_number") 
+    @SerializedName("season_number")
     val seasonNumber: Int = 0,
-    @SerializedName("show_id") 
+    @SerializedName("show_id")
     val showId: Int = 0,
-    @SerializedName("still_path") 
+    @SerializedName("still_path")
     val stillPath: String = "",
-    @SerializedName("vote_average") 
+    @SerializedName("vote_average")
     val voteAverage: Int = 0,
-    @SerializedName("vote_count") 
+    @SerializedName("vote_count")
     val voteCount: Int = 0
 )

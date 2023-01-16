@@ -14,6 +14,6 @@ abstract class BindAppDispatcher {
 
     @Binds
     @Singleton
-    abstract fun bindAppDispatcher(appDispatcherImpl: AppDispatcherImpl) : AppDispatcher
+    abstract fun bindAppDispatcher(appDispatcherImpl: AppDispatcherImpl): AppDispatcher
 
 }

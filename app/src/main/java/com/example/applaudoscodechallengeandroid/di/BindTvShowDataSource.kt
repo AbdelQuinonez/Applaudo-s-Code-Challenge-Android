@@ -14,6 +14,6 @@ abstract class BindTvShowDataSource {
 
     @Binds
     @Singleton
-    abstract fun bindTvShowService(tvShowRemoteDataSourceImpl: TvShowRemoteDataSourceImpl) : TvShowRemoteDataSource
+    abstract fun bindTvShowService(tvShowRemoteDataSourceImpl: TvShowRemoteDataSourceImpl): TvShowRemoteDataSource
 
 }

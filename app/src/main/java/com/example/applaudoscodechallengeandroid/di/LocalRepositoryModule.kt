@@ -38,7 +38,10 @@ object LocalRepositoryModule {
 
     @Provides
     @Singleton
-    fun provideDataStore(application: Application, dispatcher: AppDispatcher): DataStore<Preferences> =
+    fun provideDataStore(
+        application: Application,
+        dispatcher: AppDispatcher
+    ): DataStore<Preferences> =
         PreferenceDataStoreFactory.create(
             corruptionHandler = ReplaceFileCorruptionHandler(
                 produceNewData = { emptyPreferences() }

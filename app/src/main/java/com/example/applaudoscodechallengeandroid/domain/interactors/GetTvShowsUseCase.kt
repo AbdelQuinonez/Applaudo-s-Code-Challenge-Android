@@ -25,11 +25,11 @@ class GetTvShowsUseCase @Inject constructor(
 
         return try {
             val tvShowCacheModelList = localRepository.getTvShows()
-            val tvShowDomainModelList = List(tvShowCacheModelList.size){ i ->
+            val tvShowDomainModelList = List(tvShowCacheModelList.size) { i ->
                 tvShowCacheModelList[i].mapFromCacheToDomain()
             }
             DataState.success(tvShowDomainModelList)
-        }catch ( e: Exception){
+        } catch (e: Exception) {
             val errorModel = ErrorHandling.handleError(e)
             DataState.failure(errorModel)
         }

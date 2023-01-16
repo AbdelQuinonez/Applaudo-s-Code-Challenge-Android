@@ -6,7 +6,7 @@ import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity
-class TvShowDetailsCacheModel (
+class TvShowDetailsCacheModel(
     @PrimaryKey
     val id: Int = 0,
     @ColumnInfo

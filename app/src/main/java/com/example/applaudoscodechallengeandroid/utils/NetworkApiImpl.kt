@@ -43,8 +43,8 @@ class NetworkApiImpl @Inject constructor(@ApplicationContext val context: Contex
         }
     }
 
-    override fun connectivityStatus(): Flow<NetworkApi.Status> = callbackFlow{
-        val callback = object: ConnectivityManager.NetworkCallback(){
+    override fun connectivityStatus(): Flow<NetworkApi.Status> = callbackFlow {
+        val callback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
                 super.onAvailable(network)
                 launch { send(NetworkApi.Status.Available) }

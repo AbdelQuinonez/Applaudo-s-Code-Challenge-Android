@@ -6,5 +6,5 @@ import com.example.applaudoscodechallengeandroid.localdatasource.database.model.
 
 interface TvShowRepository {
     suspend fun getTvShows(): DataState<List<TvShowCacheModel>>
-    suspend fun getTvShowDetails(tvId:Int): DataState<TvShowDetailsCacheModel>
+    suspend fun getTvShowDetails(tvId: Int): DataState<TvShowDetailsCacheModel>
 }

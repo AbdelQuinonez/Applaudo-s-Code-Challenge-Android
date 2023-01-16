@@ -40,7 +40,8 @@ fun PrimaryButton(
             contentColor = WHITE,
         ),
         modifier = modifier
-            .testTag(PRIMARY_BUTTON_TEST_TAG).defaultMinSize(
+            .testTag(PRIMARY_BUTTON_TEST_TAG)
+            .defaultMinSize(
                 minHeight = dimensionResource(R.dimen.btn_height)
             )
     ) {

@@ -19,7 +19,8 @@ object DaoModule {
         appDatabase.tvShow()
 
     @Provides
-    @Singleton fun provideTvShowSeasonDao(appDatabase: AppDatabase): TvShowSeasonDao =
+    @Singleton
+    fun provideTvShowSeasonDao(appDatabase: AppDatabase): TvShowSeasonDao =
         appDatabase.tvShowSeason()
 
 }

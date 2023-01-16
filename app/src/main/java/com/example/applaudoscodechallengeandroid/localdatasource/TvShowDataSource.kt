@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowCacheModel
 
-class TvShowDataSource (
+class TvShowDataSource(
     private val localRepository: LocalRepository,
 ) : PagingSource<Int, TvShowCacheModel>() {
 
@@ -17,19 +17,19 @@ class TvShowDataSource (
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, TvShowCacheModel> {
         return try {
-            val nextPageNumber  = params.key ?: 1
+            val nextPageNumber = params.key ?: 1
             val response = localRepository.getTvShows()
             LoadResult.Page(
                 data = response,
                 prevKey = null,
-                nextKey = if(response.isNotEmpty()) 1 else null
+                nextKey = if (response.isNotEmpty()) 1 else null
             )
         } catch (e: Exception) {
             LoadResult.Error(e)
         }
     }
 
-    companion object{
+    companion object {
         const val NUMBER_OF_TV_SHOWS_PER_REQUEST = 10
     }
 

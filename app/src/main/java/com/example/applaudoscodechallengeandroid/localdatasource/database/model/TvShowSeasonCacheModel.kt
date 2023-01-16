@@ -8,11 +8,11 @@ import com.example.applaudoscodechallengeandroid.domain.model.TvShowSeasonDomain
 @Entity
 class TvShowSeasonCacheModel(
     @PrimaryKey
-    val id : Int = 0,
+    val id: Int = 0,
     @ColumnInfo
     val tvId: Int = 0,
     @ColumnInfo
-    val name : String = "",
+    val name: String = "",
     @ColumnInfo
     val overview: String = "",
     @ColumnInfo
@@ -21,7 +21,7 @@ class TvShowSeasonCacheModel(
     val seasonNumber: Int = 0,
     @ColumnInfo
     val episodeCount: Int = 0
-){
+) {
     fun mapFromCacheToDomainModel(): TvShowSeasonDomainModel =
         TvShowSeasonDomainModel(
             id = this.id,

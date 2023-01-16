@@ -12,7 +12,7 @@ interface NetworkApi {
 
     fun connectivityStatus(): Flow<Status>
 
-    enum class Status{
+    enum class Status {
         Available, Unavailable, Lost, Losing
     }
 }

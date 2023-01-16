@@ -4,7 +4,7 @@ import com.example.applaudoscodechallengeandroid.domain.model.SortBy
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 
 data class TvShowListUiState(
-    val loading : Boolean = false,
+    val loading: Boolean = false,
     val tvShowDomainModelList: List<TvShowDomainModel> = listOf(),
     val sortBy: SortBy? = null
 )

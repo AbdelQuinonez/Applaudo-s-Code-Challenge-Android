@@ -9,24 +9,24 @@ import javax.inject.Inject
 
 class TvShowRepositoryImpl @Inject constructor(
     private val tvShowRemoteDataSource: TvShowRemoteDataSource
-): TvShowRepository
-
-    {
+) : TvShowRepository {
     override suspend fun getTvShows(): DataState<List<TvShowCacheModel>> {
-        return try{
-            val tvShowCacheModelList = tvShowRemoteDataSource.getTvShows().mapFromRemoteToCacheModel()
+        return try {
+            val tvShowCacheModelList =
+                tvShowRemoteDataSource.getTvShows().mapFromRemoteToCacheModel()
             DataState.success(tvShowCacheModelList)
-        } catch ( e: Exception){
+        } catch (e: Exception) {
             val errorModel = ErrorHandling.handleError(e)
             DataState.failure(errorModel)
         }
     }
 
     override suspend fun getTvShowDetails(tvId: Int): DataState<TvShowDetailsCacheModel> {
-        return try{
-            val tvShowCacheModel = tvShowRemoteDataSource.getTvShowDetails(tvId).mapFromRemoteToCacheModel()
+        return try {
+            val tvShowCacheModel =
+                tvShowRemoteDataSource.getTvShowDetails(tvId).mapFromRemoteToCacheModel()
             DataState.success(tvShowCacheModel)
-        } catch ( e: Exception){
+        } catch (e: Exception) {
             val errorModel = ErrorHandling.handleError(e)
             DataState.failure(errorModel)
         }

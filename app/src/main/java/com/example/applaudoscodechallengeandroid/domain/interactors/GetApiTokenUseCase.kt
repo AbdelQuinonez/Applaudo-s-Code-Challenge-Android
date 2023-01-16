@@ -7,7 +7,7 @@ import javax.inject.Inject
 class GetApiTokenUseCase @Inject constructor(
     private val userPreferences: UserPreferences
 ) {
-    suspend operator fun invoke(){
+    suspend operator fun invoke() {
         userPreferences.setApiToken(Constants.API_TOKEN)
     }
 }
