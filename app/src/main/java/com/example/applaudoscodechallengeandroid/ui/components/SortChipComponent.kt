@@ -16,7 +16,7 @@ import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosCodeChallenge
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosShapes
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
 import com.example.applaudoscodechallengeandroid.ui.theme.GRAY
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TEXT_TEST
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.TEXT_TEST
 
 @Composable
 fun SortChip(

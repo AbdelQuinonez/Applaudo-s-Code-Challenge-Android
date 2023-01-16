@@ -12,9 +12,9 @@ import androidx.room.Room
 import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
 import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferencesImpl
 import com.example.applaudoscodechallengeandroid.localdatasource.database.AppDatabase
-import com.example.applaudoscodechallengeandroid.utils.AppDispatcher
-import com.example.applaudoscodechallengeandroid.utils.Constants.DATA_STORE_NAME
-import com.example.applaudoscodechallengeandroid.utils.Constants.LOCAL_DATABASE_NAME
+import com.example.applaudoscodechallengeandroid.ui.utils.AppDispatcher
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.DATA_STORE_NAME
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.LOCAL_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

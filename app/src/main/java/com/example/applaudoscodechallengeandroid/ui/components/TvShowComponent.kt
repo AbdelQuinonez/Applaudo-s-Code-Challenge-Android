@@ -22,11 +22,11 @@ import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosCodeChallenge
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosShapes
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
 import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
-import com.example.applaudoscodechallengeandroid.utils.Constants.EMPTY_STRING
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TV_SHOW_NAME
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TV_SHOW_POSTER_PATH
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TV_SHOW_TEST_TAG
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.VOTE_AVERAGE
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.EMPTY_STRING
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.TV_SHOW_NAME
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.TV_SHOW_POSTER_PATH
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.TV_SHOW_TEST_TAG
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.VOTE_AVERAGE
 
 @Composable
 fun TvShowComposable(

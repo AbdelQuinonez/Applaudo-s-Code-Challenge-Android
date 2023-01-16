@@ -6,7 +6,7 @@ import com.example.applaudoscodechallengeandroid.core.successOr
 import com.example.applaudoscodechallengeandroid.domain.interactors.GetTvShowDetailsUseCase
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.state.TvShowDetailsUiState
-import com.example.applaudoscodechallengeandroid.utils.Constants.INVALID_ID
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.INVALID_ID
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

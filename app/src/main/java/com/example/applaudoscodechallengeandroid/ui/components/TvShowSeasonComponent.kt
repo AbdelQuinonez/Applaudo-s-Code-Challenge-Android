@@ -19,7 +19,7 @@ import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosShapes
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
 import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
 import com.example.applaudoscodechallengeandroid.ui.theme.primaryColor
-import com.example.applaudoscodechallengeandroid.utils.Constants
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants
 
 @Composable
 fun TvShowSeasonComponent(

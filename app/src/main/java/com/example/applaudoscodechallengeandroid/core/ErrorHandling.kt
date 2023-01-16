@@ -1,10 +1,10 @@
 package com.example.applaudoscodechallengeandroid.core
 
-import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_401
-import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_402
-import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_403
-import com.example.applaudoscodechallengeandroid.utils.Constants.API_RESPONSE_CODE_404
-import com.example.applaudoscodechallengeandroid.utils.Constants.ERROR_UNKNOWN
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.API_RESPONSE_CODE_401
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.API_RESPONSE_CODE_402
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.API_RESPONSE_CODE_403
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.API_RESPONSE_CODE_404
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.ERROR_UNKNOWN
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException
 import retrofit2.HttpException

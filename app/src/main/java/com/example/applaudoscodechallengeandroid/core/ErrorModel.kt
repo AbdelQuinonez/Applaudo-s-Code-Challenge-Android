@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.core
 
-import com.example.applaudoscodechallengeandroid.utils.Constants.ERROR_UNKNOWN
-import com.example.applaudoscodechallengeandroid.utils.Constants.NO_ERROR_MESSAGE
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.ERROR_UNKNOWN
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.NO_ERROR_MESSAGE
 import com.google.gson.annotations.SerializedName
 
 data class ErrorModel(

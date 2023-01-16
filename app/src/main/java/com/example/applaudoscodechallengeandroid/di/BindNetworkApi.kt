@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.example.applaudoscodechallengeandroid.utils.NetworkApi
-import com.example.applaudoscodechallengeandroid.utils.NetworkApiImpl
+import com.example.applaudoscodechallengeandroid.ui.utils.NetworkApi
+import com.example.applaudoscodechallengeandroid.ui.utils.NetworkApiImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

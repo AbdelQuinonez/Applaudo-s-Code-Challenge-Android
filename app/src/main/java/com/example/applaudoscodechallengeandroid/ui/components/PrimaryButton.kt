@@ -16,8 +16,8 @@ import com.example.applaudoscodechallengeandroid.R
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosCodeChallengeAndroidTheme
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosShapes
 import com.example.applaudoscodechallengeandroid.ui.theme.WHITE
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.PRIMARY_BUTTON_TEST_TAG
-import com.example.applaudoscodechallengeandroid.utils.TestConstants.TEXT_TEST
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.PRIMARY_BUTTON_TEST_TAG
+import com.example.applaudoscodechallengeandroid.ui.utils.TestConstants.TEXT_TEST
 
 
 @Composable

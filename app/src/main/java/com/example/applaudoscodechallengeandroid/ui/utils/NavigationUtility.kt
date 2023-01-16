@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid.utils
+package com.example.applaudoscodechallengeandroid.ui.utils
 
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController

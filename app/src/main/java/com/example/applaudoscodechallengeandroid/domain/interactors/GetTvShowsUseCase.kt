@@ -6,7 +6,7 @@ import com.example.applaudoscodechallengeandroid.core.successOr
 import com.example.applaudoscodechallengeandroid.data.TvShowRepository
 import com.example.applaudoscodechallengeandroid.domain.model.TvShowDomainModel
 import com.example.applaudoscodechallengeandroid.localdatasource.LocalRepository
-import com.example.applaudoscodechallengeandroid.utils.NetworkApi
+import com.example.applaudoscodechallengeandroid.ui.utils.NetworkApi
 import javax.inject.Inject
 
 class GetTvShowsUseCase @Inject constructor(

@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid.utils
+package com.example.applaudoscodechallengeandroid.ui.utils
 
 import kotlinx.coroutines.CoroutineDispatcher
 

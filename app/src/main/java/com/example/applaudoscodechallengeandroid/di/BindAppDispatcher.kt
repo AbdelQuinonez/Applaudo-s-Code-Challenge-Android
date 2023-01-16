@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.di
 
-import com.example.applaudoscodechallengeandroid.utils.AppDispatcher
-import com.example.applaudoscodechallengeandroid.utils.AppDispatcherImpl
+import com.example.applaudoscodechallengeandroid.ui.utils.AppDispatcher
+import com.example.applaudoscodechallengeandroid.ui.utils.AppDispatcherImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

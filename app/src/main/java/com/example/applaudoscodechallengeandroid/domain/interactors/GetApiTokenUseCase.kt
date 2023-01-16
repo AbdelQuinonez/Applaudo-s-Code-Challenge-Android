@@ -1,7 +1,7 @@
 package com.example.applaudoscodechallengeandroid.domain.interactors
 
 import com.example.applaudoscodechallengeandroid.localdatasource.UserPreferences
-import com.example.applaudoscodechallengeandroid.utils.Constants
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants
 import javax.inject.Inject
 
 class GetApiTokenUseCase @Inject constructor(

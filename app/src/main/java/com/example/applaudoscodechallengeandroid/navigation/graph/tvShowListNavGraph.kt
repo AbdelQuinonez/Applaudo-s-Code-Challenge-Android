@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinations
 import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.TvShowDetailsRoute
-import com.example.applaudoscodechallengeandroid.utils.goBack
+import com.example.applaudoscodechallengeandroid.ui.utils.goBack
 
 fun NavGraphBuilder.tvShowListNavGraph(navController: NavHostController) {
 

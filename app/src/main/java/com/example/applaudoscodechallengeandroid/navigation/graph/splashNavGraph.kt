@@ -7,7 +7,7 @@ import androidx.navigation.navigation
 import com.example.applaudoscodechallengeandroid.navigation.NavigationDestinations
 import com.example.applaudoscodechallengeandroid.ui.splashscreen.SplashRoute
 import com.example.applaudoscodechallengeandroid.ui.tvshowlist.TvShowListRoute
-import com.example.applaudoscodechallengeandroid.utils.navigateTo
+import com.example.applaudoscodechallengeandroid.ui.utils.navigateTo
 
 fun NavGraphBuilder.splashNavGraph(navController: NavHostController) {
     navigation(

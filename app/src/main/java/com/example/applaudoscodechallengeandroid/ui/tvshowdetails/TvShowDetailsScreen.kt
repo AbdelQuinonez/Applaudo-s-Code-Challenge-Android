@@ -31,9 +31,9 @@ import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
 import com.example.applaudoscodechallengeandroid.ui.theme.WHITE
 import com.example.applaudoscodechallengeandroid.ui.theme.primaryColor
 import com.example.applaudoscodechallengeandroid.ui.tvshowdetails.state.TvShowDetailsUiState
-import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_GO_BACK_BUTTON
-import com.example.applaudoscodechallengeandroid.utils.Constants.CONTENT_DESCRIPTION_IMAGE_TV_SHOW_DETAILS
-import com.example.applaudoscodechallengeandroid.utils.Constants.INVALID_ID
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.CONTENT_DESCRIPTION_GO_BACK_BUTTON
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.CONTENT_DESCRIPTION_IMAGE_TV_SHOW_DETAILS
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants.INVALID_ID
 
 @Composable
 fun TvShowDetailsRoute(

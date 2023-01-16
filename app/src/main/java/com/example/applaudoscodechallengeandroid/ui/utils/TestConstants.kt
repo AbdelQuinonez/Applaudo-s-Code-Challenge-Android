@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid.utils
+package com.example.applaudoscodechallengeandroid.ui.utils
 
 object TestConstants {
     const val PRIMARY_BUTTON_TEST_TAG = "primaryButton"

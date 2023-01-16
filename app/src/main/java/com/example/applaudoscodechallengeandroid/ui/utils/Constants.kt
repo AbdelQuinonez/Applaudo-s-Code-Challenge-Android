@@ -1,4 +1,4 @@
-package com.example.applaudoscodechallengeandroid.utils
+package com.example.applaudoscodechallengeandroid.ui.utils
 
 object Constants {
     const val EMPTY_STRING = ""

@@ -17,7 +17,7 @@ import com.example.applaudoscodechallengeandroid.ui.components.PrimaryButton
 import com.example.applaudoscodechallengeandroid.ui.login.state.LoginViewModel
 import com.example.applaudoscodechallengeandroid.ui.theme.ApplaudosTypography
 import com.example.applaudoscodechallengeandroid.ui.theme.TEXT
-import com.example.applaudoscodechallengeandroid.utils.Constants
+import com.example.applaudoscodechallengeandroid.ui.utils.Constants
 
 @Composable
 fun LoginRoute(
