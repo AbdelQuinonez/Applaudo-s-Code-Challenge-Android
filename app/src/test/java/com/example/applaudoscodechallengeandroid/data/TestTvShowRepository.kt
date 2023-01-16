@@ -1,8 +1,6 @@
 package com.example.applaudoscodechallengeandroid.data
 
-import androidx.datastore.preferences.core.preferencesOf
 import com.example.applaudoscodechallengeandroid.core.DataState
-import com.example.applaudoscodechallengeandroid.data.TvShowRepository
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowCacheModel
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowDetailsCacheModel
 import com.example.applaudoscodechallengeandroid.localdatasource.database.model.TvShowSeasonCacheModel
